@@ -18,10 +18,49 @@ a) Construct and show the equivalent graphical model.
 
 b) What is the prior probability of coma P(C)?
 
+Posterior distribution:
+
+	probability (  "Coma" ) { //1 variable(s) and 2 values
+		table 
+			0.47435035514892876	// p(true | evidence )
+			0.5256496448510712; 	// p(false | evidence );
+	}
+
 c) What is the probability of metastatic cancer given the patient has severe headaches and has not fallen into coma? 
+
+  - Set Coma to observed false.
+  - Set Severe_Headache to observed true.
+  - Query Metastatic_Cancer.
+
+Posterior distribution:
+
+	probability (  "Metastatic_Cancer" ) { //1 variable(s) and 2 values
+		table 
+			0.0757614259265982	// p(true | evidence )
+			0.9242385740734018; 	// p(false | evidence );
+	}
+
 
 d) What is the Markov blanket of coma? 
 
+In a Bayesian network, the Markov blanket of node A includes its parents, children and the other parents of all of its children.
+
+http://en.wikipedia.org/wiki/Markov_blanket
+
+Brain Tumor and Increased Total Serum Calcium
+
 e) Are increased total serum calcium and brain tumor independent given coma? Explain. 
+No. Explaining away. See lecture 11, slide 10
 
 f) What is the probability of fallen into coma given the patient has metastatic cancer? 
+
+  - Set Metastatic_Cancer to observed true.
+  - Query Coma.
+
+Posterior distribution:
+
+	probability (  "Coma" ) { //1 variable(s) and 2 values
+		table 
+			0.5040679804736937	// p(true | evidence )
+			0.4959320195263062; 	// p(false | evidence );
+	}
