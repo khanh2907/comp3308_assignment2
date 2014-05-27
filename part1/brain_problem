@@ -1,0 +1,44 @@
+// Bayesian network 
+network "InternalNetwork" { //5 variables and 5 probability distributions
+}
+variable  "Severe_Headache" { //2 values
+	type discrete[2] {  "true"  "false" };
+	property "position = (196, 117)" ;
+}
+variable  "Metastatic_Cancer" { //2 values
+	type discrete[2] {  "true"  "false" };
+	property "position = (338, 130)" ;
+}
+variable  "Brain_Tumor" { //2 values
+	type discrete[2] {  "true"  "false" };
+	property "position = (258, 252)" ;
+}
+variable  "Coma" { //2 values
+	type discrete[2] {  "true"  "false" };
+	property "position = (446, 270)" ;
+}
+variable  "Increased_Total_Serum_Calcium" { //2 values
+	type discrete[2] {  "true"  "false" };
+	property "position = (522, 210)" ;
+}
+probability (  "Severe_Headache"  "Brain_Tumor" ) { //2 variable(s) and 4 values
+	table 
+		 0.8 0.2 0.6 0.4;
+}
+probability (  "Metastatic_Cancer" ) { //1 variable(s) and 2 values
+	table 
+		0.2	// p(true | evidence )
+		0.8; 	// p(false | evidence );
+}
+probability (  "Brain_Tumor"  "Metastatic_Cancer" ) { //2 variable(s) and 4 values
+	table 
+		 0.2 0.8 0.05 0.95;
+}
+probability (  "Coma"  "Brain_Tumor"  "Increased_Total_Serum_Calcium" ) { //3 variable(s) and 8 values
+	table 
+		 0.8 0.8 0.2 0.2 0.8 0.05 0.2 0.95;
+}
+probability (  "Increased_Total_Serum_Calcium"  "Metastatic_Cancer" ) { //2 variable(s) and 4 values
+	table 
+		 0.8 0.2 0.02 0.98;
+}
