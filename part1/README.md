@@ -15,9 +15,13 @@ The conditional probability of coma P(C | I, B) is: P(c | i, b) = 0.8, P(c | ¬i
 The conditional probability of severe headache P(S | B) is P(s | b) = 0.8 and P(s | ¬b) = 0.6.
 
 a) Construct and show the equivalent graphical model.
+
 b) What is the prior probability of coma P(C)?
-c) What is the probability of metastatic cancer given the patient has severe headaches and has 
-not fallen into coma? 
+
+c) What is the probability of metastatic cancer given the patient has severe headaches and has not fallen into coma? 
+
 d) What is the Markov blanket of coma? 
+
 e) Are increased total serum calcium and brain tumor independent given coma? Explain. 
+
 f) What is the probability of fallen into coma given the patient has metastatic cancer? 
