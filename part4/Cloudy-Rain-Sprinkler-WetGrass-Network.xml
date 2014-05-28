@@ -1,0 +1,34 @@
+<network>
+	<node>
+		<id>C</id>
+		<name>Cloudy</name>
+		<probability>0.5</probability>
+	</node>
+
+	<node>
+		<id>S</id>
+		<name>Sprinkler</name>
+		<parent>C</parent>
+		<probability given="C">0.1</probability>
+		<probability given="-C">0.5</probability>
+	</node>
+	
+	<node>
+		<id>R</id>
+		<name>Rain</name>
+		<parent>C</parent>
+		<probability given="C">0.8</probability>
+		<probability given="-C">0.2</probability>
+	</node>
+	
+	<node>
+		<id>W</id>
+		<name>Wet Grass</name>
+		<parent>S</parent>
+		<parent>R</parent>
+		<probability given="S, R">0.99</probability>
+		<probability given="S, -R">0.9</probability>
+		<probability given="-S, R">0.9</probability>
+		<probability given="-S, -R">0.00</probability>
+	</node>
+</network>
