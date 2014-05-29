@@ -70,14 +70,14 @@ class Node:
 		if self.id in e:
 			return True, True
 		else:
-			n_id = '-' + self.id
+			n_id = "".join(['-', self.id])
 			if n_id in e:
 				return True, False
 			else:
 				return False, None
 
 	def negated_id(self):
-		return "-" + self.id
+		return "".join(['-', self.id])
 
 
 

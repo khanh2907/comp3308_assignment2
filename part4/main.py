@@ -1,7 +1,7 @@
 from classes.node import Node
 from classes.bayes_net import BayesNet
 import xml.etree.ElementTree as ET
-import numpy
+import numpy, time, sys
 
 def main():
 	network = ET.parse("Cloudy-Rain-Sprinkler-WetGrass-Network.xml")
@@ -22,7 +22,7 @@ def main():
 	print "Estimating the probability of P(Cloudy | Sprinkler, Wetgrass)"
 
 	for i in range(0, M):
-		print str(i+1) + "th iteration"
+		print '%d out of %d done.' % (i+1, M)
 		p.append(bayes_net.likelihood_weighting(X, e, N))
 
 	arr = numpy.array(p)

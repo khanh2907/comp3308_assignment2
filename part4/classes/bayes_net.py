@@ -64,8 +64,10 @@ class BayesNet:
 					for parent in node.parents:
 						if parent in x:
 							given_parents.append(parent)
-						elif '-'+parent in x:
-							given_parents.append('-'+parent)
+						else:
+							neg = "".join(['-', parent])
+							if neg in x:
+								given_parents.append(neg)
 
 					# sample P(this| parents(this))
 					p_true = node.get_probability(True, given_parents)
