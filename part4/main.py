@@ -1,49 +1,53 @@
+import sys
+import os.path
 from classes.node import Node
 from classes.bayes_net import BayesNet
 import xml.etree.ElementTree as ET
 import numpy, time, sys
 
 def main():
-	network = ET.parse("Cloudy-Rain-Sprinkler-WetGrass-Network.xml")
+	if (len(sys.argv) > 1):
+		N = int(sys.argv[1])
 
-	bayes_net = BayesNet(network)
+		network = ET.parse("Cloudy-Rain-Sprinkler-WetGrass-Network.xml")
 
-	# Find P(C|S,W)
-	X = 'C'
-	e = ['S', 'W']
+		bayes_net = BayesNet(network)
 
-	p = []
+		# Find P(C|S,W)
+		X = 'C'
+		e = ['S', 'W']
 
-	M = 1000
-	N = 5000
-	# python main.py  211.93s user 81.52s system 99% cpu 4:53.51 total
+		p = []
 
-	print "----------- Likelihood Weighting Sampling ---------------"
-	print "Estimating the probability of P(Cloudy | Sprinkler, Wetgrass)"
+		M = 1000
+		# python main.py  211.93s user 81.52s system 99% cpu 4:53.51 total
 
-	for i in range(0, M):
-		print '%d out of %d done.' % (i+1, M)
-		p.append(bayes_net.likelihood_weighting(X, e, N))
+		print "----------- Likelihood Weighting Sampling ---------------"
+		print "Estimating the probability of P(Cloudy | Sprinkler, Wetgrass)"
 
-	arr = numpy.array(p)
+		for i in range(0, M):
+			p.append(bayes_net.likelihood_weighting(X, e, N))
 
-	# find the mean
-	mean = numpy.mean(arr)
+		arr = numpy.array(p)
 
-	# find the variance
-	variance = numpy.var(arr)
+		# find the mean
+		mean = numpy.mean(arr)
 
-	# find the standard deviation
-	std = numpy.std(arr)
+		# find the variance
+		variance = numpy.var(arr)
 
-	print "---- Summary ----"
-	print "N:", N
-	print "M:", M
-	print "Mean:", mean
-	print "Variance:", variance
-	print "Standard Deviation:", std
-	print ""
-	print "--------------------------------------------------------"
+		# find the standard deviation
+		std = numpy.std(arr)
+
+		print "---- Summary ----"
+		print "N:", N
+		print "M:", M
+		print "Mean:", mean
+		print "Variance:", variance
+		print "Standard Deviation:", std
+		print ""
+	else:
+		print "Please provide N."
 
 
 

@@ -1,0 +1,9 @@
+----------- Likelihood Weighting Sampling ---------------
+Estimating the probability of P(Cloudy | Sprinkler, Wetgrass)
+---- Summary ----
+N: 10
+M: 1000
+Mean: 0.5069
+Variance: 0.02524239
+Standard Deviation: 0.158878538513
+
