@@ -53,10 +53,9 @@ class Node:
 						ret_val = ret_val.get(condition)
 							
 				if ret_val is not None:
-					if state is True:
-						return ret_val
-					else:
-						return 1.0 - ret_val
+					if state is False:
+						ret_val = 1.0 - ret_val
+					return ret_val
 			
 			return ret_val
 
