@@ -19,12 +19,13 @@ a) Construct and show the equivalent graphical model.
 b) What is the prior probability of coma P(C)?
 
 Posterior distribution:
-
+	
 	probability (  "Coma" ) { //1 variable(s) and 2 values
 		table 
-			0.47435035514892876	// p(true | evidence )
-			0.5256496448510712; 	// p(false | evidence );
+			0.32	// p(true | evidence )
+			0.68; 	// p(false | evidence );
 	}
+
 
 c) What is the probability of metastatic cancer given the patient has severe headaches and has not fallen into coma? 
 
@@ -33,11 +34,11 @@ c) What is the probability of metastatic cancer given the patient has severe hea
   - Query Metastatic_Cancer.
 
 Posterior distribution:
-
+	
 	probability (  "Metastatic_Cancer" ) { //1 variable(s) and 2 values
 		table 
-			0.0757614259265982	// p(true | evidence )
-			0.9242385740734018; 	// p(false | evidence );
+			0.12087912087912088	// p(true | evidence )
+			0.8791208791208791; 	// p(false | evidence );
 	}
 
 
@@ -61,6 +62,6 @@ Posterior distribution:
 
 	probability (  "Coma" ) { //1 variable(s) and 2 values
 		table 
-			0.5040679804736937	// p(true | evidence )
-			0.4959320195263062; 	// p(false | evidence );
+			0.68	// p(true | evidence )
+			0.32; 	// p(false | evidence );
 	}

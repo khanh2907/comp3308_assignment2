@@ -84,15 +84,15 @@ Metastatic cancer is a possible cause of a brain tumour and is also an explanati
 Posterior distribution:
 	probability (  "Coma" ) { //1 variable(s) and 2 values
 		table 
-			0.47435035514892876	// p(true | evidence )
-			0.5256496448510712; 	// p(false | evidence );
+			0.32	// p(true | evidence )
+			0.68; 	// p(false | evidence );
 	}
 \end{lstlisting}
 \captionof{figure}{Probability of coma query output using JavaBayes}
 \end{minipage}\\
 \\
 \\
-Using the \tt{Query} function in JavaBayes, $P(C) = 0.47435035514892876$.
+Using the \tt{Query} function in JavaBayes, $P(C) = 0.32$.
 
 \item What is the probability of metastatic cancer given the patient has severe headaches and has not fallen into coma? 
 
@@ -101,15 +101,15 @@ Using the \tt{Query} function in JavaBayes, $P(C) = 0.47435035514892876$.
 Posterior distribution:
 	probability (  "Metastatic_Cancer" ) { //1 variable(s) and 2 values
 		table 
-			0.0757614259265982	// p(true | evidence )
-			0.9242385740734018; 	// p(false | evidence );
+			0.12087912087912088	// p(true | evidence )
+			0.8791208791208791; 	// p(false | evidence );
 	}
 \end{lstlisting}
 \captionof{figure}{$P(M | S, \neg C)$ query output using JavaBayes}
 \end{minipage}\\
 \\
 \\
-Using the \tt{Query} function in JavaBayes, $P(M | S, \neg C) = 0.0757614259265982$.
+Using the \tt{Query} function in JavaBayes, $P(M | S, \neg C) = 0.12087912087912088$.
 
 \item What is the Markov blanket of coma?
 
@@ -130,19 +130,19 @@ Normally, total serum calcium and brain tumor are independent, but if we are giv
 Posterior distribution:
 	probability (  "Coma" ) { //1 variable(s) and 2 values
 		table 
-			0.5040679804736937	// p(true | evidence )
-			0.4959320195263062; 	// p(false | evidence );
+			0.68	// p(true | evidence )
+			0.32; 	// p(false | evidence );
 	}
 \end{lstlisting}
 \captionof{figure}{$P(C | M)$ query output using JavaBayes}
 \end{minipage}\\
 \\
 \\
-Using the \tt{Query} function in JavaBayes, $P(C | M) = 0.5040679804736937$.
+Using the \tt{Query} function in JavaBayes, $P(C | M) = 0.68$.
 \end{enumerate} 
 
 \subsection{Question 2}
-
+WUT I DUN EVEN
 \subsection{Question 3}
 
 \subsection{Question 4}
