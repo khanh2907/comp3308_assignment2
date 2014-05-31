@@ -12,6 +12,12 @@
 \usepackage{url}
 \usepackage{caption}
 
+\lstset{
+  language=XML,
+  morekeywords={encoding,
+    xs:schema,xs:element,xs:complexType,xs:sequence,xs:attribute}
+}
+
 % Margins
 \topmargin=-0.45in
 \evensidemargin=0in
@@ -109,7 +115,7 @@ Posterior distribution:
 \end{minipage}\\
 \\
 \\
-Using the \tt{Query} function in JavaBayes, $P(M | S, \neg C) = 0.12087912087912088$.
+Using the \tt{Observe} and \tt{Query} functions in JavaBayes, $P(M | S, \neg C) = 0.12087912087912088$.
 
 \item What is the Markov blanket of coma?
 
@@ -138,30 +144,142 @@ Posterior distribution:
 \end{minipage}\\
 \\
 \\
-Using the \tt{Query} function in JavaBayes, $P(C | M) = 0.68$.
+Using the \tt{Observe} and \tt{Query} functions in JavaBayes, $P(C | M) = 0.68$.
 \end{enumerate} 
 
 \subsection{Question 2}
 WUT I DUN EVEN
+
 \subsection{Question 3}
+something something diagnosis
 
 \subsection{Question 4}
+\subsubsection{Likelihood Weighting}
 
+We implemented the likelihood weighting in Python 2.7.5 to calculate the probability of $P(cloudy | sprinkler, wetgrass)$. \\
 
+Our program takes in the number of samples used to construct the estimate (N) as input and then runs M times which is set to 1000 by default. It then returns the mean, variance and standard deviation of the probability calculated using the likelihood weighting algorithm.\\
 
+Below in Table 1, are the results for N=10, 100, 1000, 5000.
 
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|}
+\hline
+N    & Mean      & Variance        & Standard Deviation \\ \hline
+10   & 0.5069    & 0.02524239      & 0.158878538513     \\ \hline
+100  & 0.50004   & 0.0025593984    & 0.0505904971314    \\ \hline
+1000 & 0.499573  & 0.000222700671  & 0.0149231588814    \\ \hline
+5000 & 0.5001358 & 4.979223836e-05 & 0.00705636155253   \\ \hline
+\end{tabular}
+\caption {Accuracy results for likelihood weighting}
+\end{table}
 
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah discuss table?
 
+\subsubsection{Exact Inference using JavaBayes}
+\begin{minipage}{\linewidth}
+\begin{center}
+\includegraphics[scale=0.7]{part4_bn}
+\end{center}
+\captionof{figure}{Equivalent graphical model created using JavaBayes. Sprinkler and Wet Grass set to true.}
+\end{minipage}\\
 
+\begin{minipage}{\linewidth}
+\begin{lstlisting}
+Posterior distribution:
+	probability (  "Cloudy" ) { //1 variable(s) and 2 values
+		table 
+			0.17475728155339806	// p(true | evidence )
+			0.825242718446602; 	// p(false | evidence );
+	}
+\end{lstlisting}
+\captionof{figure}{$P(Cloudy | Sprinkler, WetGrass )$ query output using JavaBayes}
+\end{minipage}\\
+\\
+\\
 
-
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah discuss exact inference and compare to other thing
 
 \section{Conclusions}
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
 
 \section{Reflection}
+blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
 
-\section{Instructions}
+\section{Code}
+Our implementation of Likelihood Weighting was written in Python 2.7.5.\\
 
+This implementation was designed to work with any Bayesian network and not just the Cloudy-Rain-Sprinkler-WetGrass network.
+
+\subsection{XML Format}
+The program reads an XML file which has the structure of the network and probability values and makes the appropriate data structures.\\
+
+The XML of the Cloudy-Rain-Sprinkler-WetGrass network can seen in the figure below.
+
+\begin{minipage}{\linewidth}
+\begin{lstlisting}
+<network>
+	<node>
+		<id>C</id>
+		<name>Cloudy</name>
+		<probability>0.5</probability>
+	</node>
+
+	<node>
+		<id>S</id>
+		<name>Sprinkler</name>
+		<parent>C</parent>
+		<probability given="C">0.1</probability>
+		<probability given="-C">0.5</probability>
+	</node>
+	
+	<node>
+		<id>R</id>
+		<name>Rain</name>
+		<parent>C</parent>
+		<probability given="C">0.8</probability>
+		<probability given="-C">0.2</probability>
+	</node>
+	
+	<node>
+		<id>W</id>
+		<name>Wet Grass</name>
+		<parent>S</parent>
+		<parent>R</parent>
+		<probability given="S, R">0.99</probability>
+		<probability given="S, -R">0.9</probability>
+		<probability given="-S, R">0.9</probability>
+		<probability given="-S, -R">0.00</probability>
+	</node>
+</network>
+\end{lstlisting}
+\captionof{figure}{Cloudy-Rain-Sprinkler-WetGrass-Network.xml}
+\end{minipage}\\
+
+\subsection{Instructions}
+To run our implementation, change directory to the where the code is. Make sure that Cloudy-Rain-Sprinkler-WetGrass-Network.xml file is present.\\
+\\
+Then run:
+
+\begin{lstlisting}
+python likelihood.py <N>
+\end{lstlisting}
+where N is the number of samples used.\\
+
+\subsubsection{Example}
+\begin{lstlisting}
+$ python likelihood.py 1000
+----------- Likelihood Weighting Sampling ---------------
+Estimating the probability of P(Cloudy | Sprinkler, Wetgrass)
+---- Summary ----
+N: 1000
+M: 1000
+Mean: 0.499573
+Variance: 0.000222700671
+Standard Deviation: 0.0149231588814
+
+\end{lstlisting}
 
 
 

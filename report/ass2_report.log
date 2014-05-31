@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.26)  31 MAY 2014 23:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.26)  1 JUN 2014 00:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -219,28 +219,34 @@ Package caption3 Info: TeX engine: e-TeX on input line 57.
 \c@ContinuedFloat=\count113
 Package caption Info: listings package is loaded.
 )
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2004/09/05 1.3 listings language file
+)
+(/usr/local/texlive/2013/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+)
 (./ass2_report.aux)
 \openout1 = `ass2_report.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 40.
-LaTeX Font Info:    ... okay on input line 40.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             macros/latex/contrib/pageslts/ 
 (lastpage)             or
 (lastpage)             http://www.ctan.org/tex-archive/ 
 (lastpage)             install/macros/latex/contrib/pageslts.tds.zip
-(lastpage)             ! on input line 40.
+(lastpage)             ! on input line 46.
 
 (/usr/local/texlive/2013/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -310,77 +316,154 @@ Package caption Info: End \AtBeginDocument code.
 [1
 
 {/usr/local/texlive/2013/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 64.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 70.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 64.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 70.
 Missing character: There is no ¬ in font cmr10!
 
 <part1_bn.png, id=8, 598.235pt x 228.855pt>
 File: part1_bn.png Graphic file (type png)
  <use part1_bn.png>
-Package pdftex.def Info: part1_bn.png used on input line 75.
+Package pdftex.def Info: part1_bn.png used on input line 81.
 (pdftex.def)             Requested size: 418.76164pt x 160.1974pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 95.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 101.
+
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 82--96
+Underfull \hbox (badness 10000) in paragraph at lines 88--102
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 82--96
+Underfull \hbox (badness 10000) in paragraph at lines 88--102
 
  []
 
 [2]
-Underfull \hbox (badness 10000) in paragraph at lines 99--113
+Underfull \hbox (badness 10000) in paragraph at lines 105--119
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 99--113
+Underfull \hbox (badness 10000) in paragraph at lines 105--119
 
  []
 
 [3 <./part1_bn.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 128--142
+Underfull \hbox (badness 10000) in paragraph at lines 134--148
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 128--142
+Underfull \hbox (badness 10000) in paragraph at lines 134--148
+
+ []
+
+
+Overfull \hbox (40.53375pt too wide) in paragraph at lines 159--160
+\OT1/cmr/m/n/10 We im-ple-mented the like-li-hood weight-ing in Python 2.7.5 to
+ cal-cu-late the prob-a-bil-ity of $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm
+/m/it/10 cloudy\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 sprinkler; wetgrass\OT1/cmr/m
+/n/10 )$. 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 161--162
+
+ []
+
+<part4_bn.png, id=20, 235.88126pt x 232.87pt>
+File: part4_bn.png Graphic file (type png)
+ <use part4_bn.png>
+Package pdftex.def Info: part4_bn.png used on input line 183.
+(pdftex.def)             Requested size: 165.11575pt x 163.00787pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--187
+
+ []
+
+[4]
+Underfull \hbox (badness 10000) in paragraph at lines 188--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 211--212
+
+ []
+
+[5 <./part4_bn.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 216--217
+
+ []
+
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 222.
+
+(/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
+File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 222.
+
+Underfull \hbox (badness 10000) in paragraph at lines 220--259
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--264
+
+ []
+
+[6]
+Underfull \hbox (badness 10000) in paragraph at lines 268--269
 
  []
 
 
 AED: lastpage setting LastPage
-[4] (./ass2_report.aux) ) 
+[7] (./ass2_report.aux) ) 
 Here is how much of TeX's memory you used:
- 5379 strings out of 493315
- 80973 string characters out of 6137904
- 247224 words of memory out of 5000000
- 8761 multiletter control sequences out of 15000+600000
- 9230 words of font info for 34 fonts, out of 8000000 for 9000
+ 5517 strings out of 493315
+ 83036 string characters out of 6137904
+ 275209 words of memory out of 5000000
+ 8888 multiletter control sequences out of 15000+600000
+ 9538 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 38i,10n,43p,483b,1011s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 38i,11n,49p,483b,1187s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/ba
 se/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
-i10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
-0.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.
-pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pf
-b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
-></usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on ass2_report.pdf (4 pages, 94566 bytes).
+bx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on ass2_report.pdf (7 pages, 124189 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 32 compressed objects within 1 object stream
+ 63 PDF objects out of 1000 (max. 8388607)
+ 43 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

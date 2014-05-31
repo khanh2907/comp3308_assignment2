@@ -1,44 +1,36 @@
 // Bayesian network 
-network "InternalNetwork" { //5 variables and 5 probability distributions
+network "InternalNetwork" { //4 variables and 4 probability distributions
 }
-variable  "Severe_Headache" { //2 values
+variable  "Cloudy" { //2 values
 	type discrete[2] {  "true"  "false" };
-	property "position = (196, 117)" ;
+	property "position = (457, 120)" ;
 }
-variable  "Metastatic_Cancer" { //2 values
+variable  "Sprinkler" { //2 values
 	type discrete[2] {  "true"  "false" };
-	property "position = (338, 130)" ;
+	property "position = (382, 207)" ;
 }
-variable  "Brain_Tumor" { //2 values
+variable  "Rain" { //2 values
 	type discrete[2] {  "true"  "false" };
-	property "position = (258, 252)" ;
+	property "position = (537, 201)" ;
 }
-variable  "Coma" { //2 values
+variable  "Wet_Grass" { //2 values
 	type discrete[2] {  "true"  "false" };
-	property "position = (446, 270)" ;
+	property "position = (463, 279)" ;
 }
-variable  "Increased_Total_Serum_Calcium" { //2 values
-	type discrete[2] {  "true"  "false" };
-	property "position = (522, 210)" ;
-}
-probability (  "Severe_Headache"  "Brain_Tumor" ) { //2 variable(s) and 4 values
+probability (  "Cloudy" ) { //1 variable(s) and 2 values
 	table 
-		 0.8 0.2 0.6 0.4;
+		0.5	// p(true | evidence )
+		0.5; 	// p(false | evidence );
 }
-probability (  "Metastatic_Cancer" ) { //1 variable(s) and 2 values
+probability (  "Sprinkler"  "Cloudy" ) { //2 variable(s) and 4 values
 	table 
-		0.2	// p(true | evidence )
-		0.8; 	// p(false | evidence );
+		 0.1 0.5 0.9 0.5;
 }
-probability (  "Brain_Tumor"  "Metastatic_Cancer" ) { //2 variable(s) and 4 values
-	table 
-		 0.2 0.05 0.8 0.95;
-}
-probability (  "Coma"  "Brain_Tumor"  "Increased_Total_Serum_Calcium" ) { //3 variable(s) and 8 values
-	table 
-		 0.8 0.8 0.8 0.05 0.2 0.2 0.2 0.95;
-}
-probability (  "Increased_Total_Serum_Calcium"  "Metastatic_Cancer" ) { //2 variable(s) and 4 values
+probability (  "Rain"  "Cloudy" ) { //2 variable(s) and 4 values
 	table 
 		 0.8 0.2 0.2 0.8;
+}
+probability (  "Wet_Grass"  "Rain"  "Sprinkler" ) { //3 variable(s) and 8 values
+	table 
+		 0.99 0.9 0.9 0.0 0.01 0.1 0.1 1.0;
 }
