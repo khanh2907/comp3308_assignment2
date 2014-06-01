@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.26)  1 JUN 2014 00:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.26)  1 JUN 2014 18:48
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -444,10 +444,10 @@ Underfull \hbox (badness 10000) in paragraph at lines 268--269
 AED: lastpage setting LastPage
 [7] (./ass2_report.aux) ) 
 Here is how much of TeX's memory you used:
- 5517 strings out of 493315
- 83036 string characters out of 6137904
- 275209 words of memory out of 5000000
- 8888 multiletter control sequences out of 15000+600000
+ 5516 strings out of 493315
+ 83016 string characters out of 6137904
+ 274209 words of memory out of 5000000
+ 8887 multiletter control sequences out of 15000+600000
  9538 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,11n,49p,483b,1187s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -460,7 +460,7 @@ x12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
 fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 ></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
 </usr/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on ass2_report.pdf (7 pages, 124189 bytes).
+Output written on ass2_report.pdf (7 pages, 124234 bytes).
 PDF statistics:
  63 PDF objects out of 1000 (max. 8388607)
  43 compressed objects within 1 object stream
