@@ -148,7 +148,32 @@ Using the \tt{Observe} and \tt{Query} functions in JavaBayes, $P(C | M) = 0.68$.
 \end{enumerate} 
 
 \subsection{Question 2}
-WUT I DUN EVEN
+\begin{minipage}{\linewidth}
+\begin{center}
+\includegraphics[scale=0.5]{part2_nbc}
+\end{center}
+\captionof{figure}{Naive Bayes Classifer}
+\end{minipage}\\
+
+\begin{enumerate}[a)]
+\item 
+
+$$ P(C | x_1, ... , x_n) = \frac{P(C) P(x_1, ... , x_n | C)}{P(x_1, ... , x_n)} $$ Bayes' Theorem
+
+
+$$ P(C | x_1, ... , x_n)  = \frac{P(C, x_1, ... , x_n)}{P(x_1, ... , x_n)} $$ Conditional Probability
+$$ P(C | x_1, ... , x_n) P(x_1, ... , x_n) = P(C, x_1, ... , x_n) $$
+
+$$ P(C, x_1, ... , x_n) =  P(x_1, ... , x_n) \frac{P(C) P(x_1, ... , x_n | C)}{P(x_1, ... , x_n)}$$
+$$ P(C, x_1, ... , x_n) =  P(C) P(x_1, ... , x_n | C)$$  
+
+$$P(x_1, ... , x_n | C) =  \prod_{i=1}^n P(x_i | C)$$ which is the distribution for $x_1, ..., x_n$ which can be given by the product of each node's probability given it's parent which is $C$.
+
+
+Therefore,
+$$P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $$
+
+\end{enumerate}
 
 \subsection{Question 3}
 something something diagnosis
