@@ -158,16 +158,16 @@ Using the \tt{Observe} and \tt{Query} functions in JavaBayes, $P(C | M) = 0.68$.
 \begin{enumerate}[a)]
 \item 
 
-$$ P(C | x_1, ... , x_n) = \frac{P(C) P(x_1, ... , x_n | C)}{P(x_1, ... , x_n)} $$ Bayes' Theorem
+$$ P(C | X_1, ... , X_n) = \frac{P(C) P(X_1, ... , X_n | C)}{P(X_1, ... , X_n)} $$ Bayes' Theorem
 
 
-$$ P(C | x_1, ... , x_n)  = \frac{P(C, x_1, ... , x_n)}{P(x_1, ... , x_n)} $$ Conditional Probability
-$$ P(C | x_1, ... , x_n) P(x_1, ... , x_n) = P(C, x_1, ... , x_n) $$
+$$ P(C | X_1, ... , X_n)  = \frac{P(C, X_1, ... , X_n)}{P(X_1, ... , X_n)} $$ Conditional Probability
+$$ P(C | X_1, ... , X_n) P(X_1, ... , X_n) = P(C, X_1, ... , X_n) $$
 
-$$ P(C, x_1, ... , x_n) =  P(x_1, ... , x_n) \frac{P(C) P(x_1, ... , x_n | C)}{P(x_1, ... , x_n)}$$
-$$ P(C, x_1, ... , x_n) =  P(C) P(x_1, ... , x_n | C)$$  
+$$ P(C, X_1, ... , X_n) =  P(X_1, ... , X_n) \frac{P(C) P(X_1, ... , X_n | C)}{P(X_1, ... , X_n)}$$
+$$ P(C, X_1, ... , X_n) =  P(C) P(X_1, ... , X_n | C)$$  
 
-$$P(x_1, ... , x_n | C) =  \prod_{i=1}^n P(x_i | C)$$ which is the distribution for $x_1, ..., x_n$ which can be given by the product of each node's probability given it's parent which is $C$.
+$$P(X_1, ... , X_n | C) =  \prod_{i=1}^n P(X_i | C)$$ which is the distribution for $X_1, ..., X_n$ which can be given by the product of each node's probability given it's parent which is $C$.
 
 
 Therefore,
