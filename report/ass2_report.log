@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.26)  4 JUN 2014 20:42
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.26)  4 JUN 2014 21:28
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -379,15 +379,20 @@ Underfull \hbox (badness 10000) in paragraph at lines 151--157
 File: part3_bn.png Graphic file (type png)
 
 <use part3_bn.png>
-Package pdftex.def Info: part3_bn.png used on input line 183.
+Package pdftex.def Info: part3_bn.png used on input line 184.
 (pdftex.def)             Requested size: 343.28166pt x 268.50247pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 181--187
+Underfull \hbox (badness 10000) in paragraph at lines 182--188
+
+ []
+
+[5 <./part3_bn.png>] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 250--251
 
  []
 
 
-Overfull \hbox (40.53375pt too wide) in paragraph at lines 210--211
+Overfull \hbox (40.53375pt too wide) in paragraph at lines 257--258
 \OT1/cmr/m/n/10 We im-ple-mented the like-li-hood weight-ing in Python 2.7.5 to
  cal-cu-late the prob-a-bil-ity of $\OML/cmm/m/it/10 P\OT1/cmr/m/n/10 (\OML/cmm
 /m/it/10 cloudy\OMS/cmsy/m/n/10 j\OML/cmm/m/it/10 sprinkler; wetgrass\OT1/cmr/m
@@ -395,99 +400,99 @@ Overfull \hbox (40.53375pt too wide) in paragraph at lines 210--211
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 210--211
+Underfull \hbox (badness 10000) in paragraph at lines 257--258
 
  []
 
-[5 <./part3_bn.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 212--213
+
+Underfull \hbox (badness 10000) in paragraph at lines 259--260
 
  []
 
-<part4_bn.png, id=32, 235.88126pt x 232.87pt>
+<part4_bn.png, id=35, 235.88126pt x 232.87pt>
 File: part4_bn.png Graphic file (type png)
  <use part4_bn.png>
-Package pdftex.def Info: part4_bn.png used on input line 234.
+Package pdftex.def Info: part4_bn.png used on input line 281.
 (pdftex.def)             Requested size: 165.11575pt x 163.00787pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 232--238
+Underfull \hbox (badness 10000) in paragraph at lines 279--285
+
+ []
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 286--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--252
+Underfull \hbox (badness 10000) in paragraph at lines 286--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--252
+Underfull \hbox (badness 10000) in paragraph at lines 286--299
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 239--252
+Underfull \hbox (badness 10000) in paragraph at lines 309--310
 
  []
 
-[6 <./part4_bn.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
+[8 <./part4_bn.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 314--315
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 267--268
-
- []
-
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 273.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 320.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 273.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 320.
 
-Underfull \hbox (badness 10000) in paragraph at lines 271--310
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 312--315
+Underfull \hbox (badness 10000) in paragraph at lines 318--357
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--320
+Underfull \hbox (badness 10000) in paragraph at lines 359--362
 
  []
 
-[8] 
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 366--367
+
+ []
+
+
 AED: lastpage setting LastPage
-[9] (./ass2_report.aux) ) 
+[10] (./ass2_report.aux) ) 
 Here is how much of TeX's memory you used:
  5526 strings out of 493315
  83179 string characters out of 6137904
- 280209 words of memory out of 5000000
+ 274209 words of memory out of 5000000
  8895 multiletter control sequences out of 15000+600000
  9538 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  38i,11n,49p,483b,1187s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/ba
-se/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-bx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmex
-10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
-0.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.
-pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
-b></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb>
-</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
-usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr
-/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/
-local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on ass2_report.pdf (9 pages, 170911 bytes).
+{/usr/local/texlive/2013/texmf-dist/fonts/enc/dvips/b
+ase/8r.enc}</usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+bx12.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cme
+x10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7
+.pfb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.p
+fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
+></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb><
+/usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
+r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
+/local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
+Output written on ass2_report.pdf (10 pages, 174801 bytes).
 PDF statistics:
- 83 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 86 PDF objects out of 1000 (max. 8388607)
+ 58 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 

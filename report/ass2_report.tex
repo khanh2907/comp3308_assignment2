@@ -156,7 +156,7 @@ Using the \tt{Observe} and \tt{Query} functions in JavaBayes, $P(C | M) = 0.68$.
 \end{minipage}\\
 
 \begin{enumerate}[a)]
-\item 
+\item
 
 $$ P(C | X_1, ... , X_n) = \frac{P(C) P(X_1, ... , X_n | C)}{P(X_1, ... , X_n)} $$ Bayes' Theorem
 
@@ -177,6 +177,7 @@ $$P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $$
 
 \subsection{Question 3}
 
+We created a Bayes net around heart disease and its common causes.
 
 \begin{minipage}{\linewidth}
 \begin{center}
@@ -191,7 +192,7 @@ $$P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $$
 \item Gender (G): Male or female.
 \item Family history (F): If anyone in their family has suffered from heart disease. True or False.
 \item Depression (D): If the patient has suffered from depression. True or False.
-\item Physically active (P): If the patient is physically active. True or False.
+\item Physically active (PA): If the patient is physically active. True or False.
 \item Smokes (S): If the patient smokes. True or False.
 \item Overweight (O): If the patient is currently overweight. True or False.
 \item High cholesterol (HC): If the patient has high cholesterol. True of False.
@@ -201,8 +202,54 @@ $$P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $$
 \end{itemize} 
 
 \subsubsection{Probability Distributions}
+$$P(A = Under 18) = x $$
+$$P(A = 18-30) = x $$
+$$P(A = 30-50) = x $$
+$$P(A = Above 50) = x $$
+
+$$P(G = male) = x $$
+
+$$P(F = true) = x $$
+$$P(D = true) = x $$
+$$P(PA = true) = x $$
+$$P(S = true) = x $$
+
+$$P(O = true | PA = true) = x $$
+$$P(O = true | PA = false) = x $$
+
+$$P(HC = true | O = true) = x $$
+$$P(HC = true | O = false) = x $$
+
+$$P(DI = true | O = true) = x $$
+$$P(DI = true | O = false) = x $$
+
+$$P(HBP = true | O= true, S = true) = x $$
+$$P(HBP = true | O= true, S = false) = x $$
+$$P(HBP = true | O= false, S = true) = x $$
+$$P(HBP = true | O= false, S = false) = x $$
+
+$$P(HD = true | A=true, D=true, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
+$$P(HD = true | A=true, D=true, F=true, G=true, DI=true, HBP=true, HC=false) = x $$
+$$P(HD = true | A=true, D=true, F=true, G=true, DI=true, HBP=false, HC=true) = x $$
+$$P(HD = true | A=true, D=true, F=true, G=true, DI=false, HBP=true, HC=true) = x $$
+$$P(HD = true | A=true, D=true, F=true, G=false, DI=true, HBP=true, HC=true) = x $$
+$$P(HD = true | A=true, D=true, F=false, G=true, DI=true, HBP=true, HC=true) = x $$
+$$P(HD = true | A=true, D=false, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
+$$P(HD = true | A=false, D=true, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
+$$P(HD = true | A=false, D=true, F=true, G=true, DI=true, HBP=true, HC=false) = x $$
+$$P(HD = true | A=false, D=true, F=true, G=true, DI=true, HBP=false, HC=true) = x $$
+$$P(HD = true | A=false, D=true, F=true, G=true, DI=false, HBP=true, HC=true) = x $$
+$$P(HD = true | A=false, D=true, F=true, G=false, DI=true, HBP=true, HC=true) = x $$
+$$P(HD = true | A=false, D=true, F=false, G=true, DI=true, HBP=true, HC=true) = x $$
+$$P(HD = true | A=false, D=false, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
+$$P(HD = true | A=false, D=false, F=true, G=true, DI=true, HBP=true, HC=false) = x $$
+$$P(HD = true | A=false, D=false, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
+fuck this, reduce nodes
 
 \subsubsection{Method}
+looked at the vic health website about heart disease and the common causes, dependencies were determined by reading this page too \\
+
+then research each dependency, to find statistics for the probability
 
 \subsection{Question 4}
 \subsubsection{Likelihood Weighting}
