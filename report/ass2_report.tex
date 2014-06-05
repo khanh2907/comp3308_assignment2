@@ -56,10 +56,10 @@ The aim of this assignment is to build Bayesian networks for diagnostic problems
 Bayesian networks are simple, probabilistic graphical models that represent sets of random variables and their conditional dependencies.
 
 \subsection{Variable Elimination}
-blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+Variable elimination is an exact inference method which eliminates/marginalises the non-evidence non-query variables individually (by summation or integration) by distributing the sum over the product. This method allows us to avoid duplicate (possibly expensive) computations and also to reduce large queries to a normalised message which can be passed along more readily.
 
 \subsection{Likelihood Weighting}
-blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+Likelihood weighting is used to avoid the potentially large amount of samples that rejection sampling rejects. It runs simililarly to rejection sampling. However, when an observed node is reached, instead of rejecting it if it does not match the evidence, the probability of the observed node given the evidence is calculated. These product of all these probabilities is then the weight for the sample over the entire network. 
 
 \section{Results and Discussion}
 \subsection{Question 1}
@@ -134,7 +134,7 @@ Normally, total serum calcium and brain tumor are independent, but if we are giv
 \begin{minipage}{\linewidth}
 \begin{lstlisting}
 Posterior distribution:
-	probability ("Coma") {  //1 variable(s) and 2 values
+	probability("Coma") {   //1 variable(s) and 2 values
 		table 
 			0.68	// p(true  | evidence )
 			0.32; 	// p(false | evidence );
@@ -169,6 +169,13 @@ which is the distribution for $X_1, ..., X_n$ which can be given by the product 
 Therefore,
 $P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $
 \item
+\begin{align*}
+\log{\left(\frac{P(C = c | X_1, \ldots, X_n)}{P(C = \neg c | X_1, \ldots, X_n)}\right)} &= \log{\left(\frac{P(C=c)}{P(C=\neg c)} \prod_{i=1}^n \frac{P(x_i | C = c)}{P(x_i | C = \neg c)}\right)} & \text{from part a)} \\
+&= \log{\left(\frac{P(C=c)}{P(C=\neg c)}\right)} + \log{\left(\prod_{i=1}^n \frac{P(x_i | C = c)}{P(x_i | C = \neg c)}\right)} \\
+&= \alpha_0 + \log{\left(\prod_{i=1}^n \frac{P(x_i | C = c)}{P(x_i | C = \neg c)}\right)} & \text{where } \alpha_0 = \log{\left(\frac{P(C=c)}{P(C=\neg c)}\right)} \\
+&= \alpha_0 + \sum_{i=1}^n \log{\left(\frac{P(x_i | C = c)}{P(x_i | C = \neg c)}\right)} \\
+&= \alpha_0 + \sum_{i=1}^n \alpha_i X_i & \text{where } \alpha_i = \log{\left(\frac{P(x_i | C = c)}{P(x_i | C = \neg c)}\right)}
+\end{align*}
 \end{enumerate}
 
 \subsection{Question 3}
@@ -257,8 +264,9 @@ blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
 blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
 
 \section{Reflection}
-blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+Once again, the ability to work in teams proved beneficial to the completion of this task. It especially helped when we could compare results and confirm our findings, or discussing of various elements such as methods, calculations and interpretations of results. 
 
+Also, this assignment gave us further insight into the usage and understanding of probability graphical models, with challenging questions that required a lot of thought to deal with.  
 \section{Code}
 Our implementation of Likelihood Weighting was written in Python 2.7.5.\\
 
