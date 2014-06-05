@@ -172,7 +172,38 @@ $P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $
 \end{enumerate}
 
 \subsection{Question 3}
-something something diagnosis
+We created a Bayes net around heart disease and its common causes.
+
+\begin{minipage}{\linewidth}
+\begin{center}
+\includegraphics[scale=0.5]{part3_bn}
+\end{center}
+\captionof{figure}{Heart disease diagnosis Bayes net}
+\end{minipage}\\
+
+\subsubsection{Random Variables}
+\begin{itemize}
+\item Age (A): Age of the patient. We will divide this up into four ranges. Under 18, 18-30, 30-50, above 50.
+\item Gender (G): Male or female.
+\item Family history (F): If anyone in their family has suffered from heart disease. True or False.
+\item Depression (D): If the patient has suffered from depression. True or False.
+\item Physically active (PA): If the patient is physically active. True or False.
+\item Smokes (S): If the patient smokes. True or False.
+\item Overweight (O): If the patient is currently overweight. True or False.
+\item High cholesterol (HC): If the patient has high cholesterol. True of False.
+\item High blood pressure (HBP): If the patient has high blood pressure. True or False.
+\item Diabetes (DI): If the patient has diabetes. Type1, Type2 or None.
+\item Heart disease (HD): If the patient has heart disease. True or False.
+\end{itemize} 
+
+\subsubsection{Probability Distributions}
+
+fuck this, reduce nodes
+
+\subsubsection{Method}
+looked at the vic health website about heart disease and the common causes, dependencies were determined by reading this page too \\
+
+then research each dependency, to find statistics for the probability
 
 \subsection{Question 4}
 \subsubsection{Likelihood Weighting}
