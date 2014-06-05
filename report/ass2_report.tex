@@ -71,7 +71,7 @@ Metastatic cancer is a possible cause of a brain tumour and is also an explanati
 \item The conditional probability of increased total serum calcium $P(I | M)$ is: $P(i | m) = 0.8$ and $P(i | \neg m) = 0.2$ 
 \item The conditional probability of brain tumor $P(B | M)$ is: $P(b | m) = 0.2$ and $P(b | \neg m) = 0.05$ 
 \item The conditional probability of coma $P(C | I, B)$ is: $P(c | i, b) = 0.8$, $P(c | \neg i, b) = 0.8$, $P(c | i, \neg b) = 0.8$ and $P(c | \neg i, \neg b) = 0.05$. 
-\item The conditional probability of severe headache $P(S | B)$ is $P(s | b) = 0.8$ and $P(s | ¬b) = 0.6$.
+\item The conditional probability of severe headache $P(S | B)$ is $P(s | b) = 0.8$ and $P(s | ï¿½b) = 0.6$.
 \end{itemize} 
 
 \begin{enumerate}[a)]
@@ -88,9 +88,9 @@ Metastatic cancer is a possible cause of a brain tumour and is also an explanati
 \begin{minipage}{\linewidth}
 \begin{lstlisting}
 Posterior distribution:
-	probability (  "Coma" ) { //1 variable(s) and 2 values
+	probability("Coma") {  //1 variable(s) and 2 values
 		table 
-			0.32	// p(true | evidence )
+			0.32	// p(true  | evidence )
 			0.68; 	// p(false | evidence );
 	}
 \end{lstlisting}
@@ -105,9 +105,9 @@ Using the \tt{Query} function in JavaBayes, $P(C) = 0.32$.
 \begin{minipage}{\linewidth}
 \begin{lstlisting}
 Posterior distribution:
-	probability (  "Metastatic_Cancer" ) { //1 variable(s) and 2 values
+	probability("Metastatic_Cancer") {      //1 variable(s) and 2 values
 		table 
-			0.12087912087912088	// p(true | evidence )
+			0.12087912087912088	// p(true  | evidence )
 			0.8791208791208791; 	// p(false | evidence );
 	}
 \end{lstlisting}
@@ -134,9 +134,9 @@ Normally, total serum calcium and brain tumor are independent, but if we are giv
 \begin{minipage}{\linewidth}
 \begin{lstlisting}
 Posterior distribution:
-	probability (  "Coma" ) { //1 variable(s) and 2 values
+	probability ("Coma") {  //1 variable(s) and 2 values
 		table 
-			0.68	// p(true | evidence )
+			0.68	// p(true  | evidence )
 			0.32; 	// p(false | evidence );
 	}
 \end{lstlisting}
@@ -157,104 +157,27 @@ Using the \tt{Observe} and \tt{Query} functions in JavaBayes, $P(C | M) = 0.68$.
 
 \begin{enumerate}[a)]
 \item
-
-$$ P(C | X_1, ... , X_n) = \frac{P(C) P(X_1, ... , X_n | C)}{P(X_1, ... , X_n)} $$ Bayes' Theorem
-
-
-$$ P(C | X_1, ... , X_n)  = \frac{P(C, X_1, ... , X_n)}{P(X_1, ... , X_n)} $$ Conditional Probability
-$$ P(C | X_1, ... , X_n) P(X_1, ... , X_n) = P(C, X_1, ... , X_n) $$
-
-$$ P(C, X_1, ... , X_n) =  P(X_1, ... , X_n) \frac{P(C) P(X_1, ... , X_n | C)}{P(X_1, ... , X_n)}$$
-$$ P(C, X_1, ... , X_n) =  P(C) P(X_1, ... , X_n | C)$$  
-
-$$P(X_1, ... , X_n | C) =  \prod_{i=1}^n P(X_i | C)$$ which is the distribution for $X_1, ..., X_n$ which can be given by the product of each node's probability given it's parent which is $C$.
-
-
+\begin{align*}
+P(C | X_1, \ldots , X_n) &= \frac{P(C) P(X_1, \ldots , X_n | C)}{P(X_1, \ldots , X_n)} & \text{Bayes' Theorem} \\
+P(C | X_1, ... , X_n) &= \frac{P(C, X_1, ... , X_n)}{P(X_1, ... , X_n)} & \text{conditional probability} \\
+P(C | X_1, ... , X_n) P(X_1, ... , X_n) &= P(C, X_1, ... , X_n) \\
+P(C, X_1, ... , X_n) &=  P(X_1, ... , X_n) \frac{P(C) P(X_1, ... , X_n | C)}{P(X_1, ... , X_n)} \\
+P(C, X_1, ... , X_n) &=  P(C) P(X_1, ... , X_n | C) \\ 
+P(X_1, ... , X_n | C) &=  \prod_{i=1}^n P(X_i | C) 
+\end{align*}
+which is the distribution for $X_1, ..., X_n$ which can be given by the product of each node's probability given its parent which is $C$.
 Therefore,
-$$P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $$
-
+$P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $
+\item
 \end{enumerate}
 
 \subsection{Question 3}
-
-We created a Bayes net around heart disease and its common causes.
-
-\begin{minipage}{\linewidth}
-\begin{center}
-\includegraphics[scale=0.5]{part3_bn}
-\end{center}
-\captionof{figure}{Heart disease diagnosis Bayes net}
-\end{minipage}\\
-
-\subsubsection{Random Variables}
-\begin{itemize}
-\item Age (A): Age of the patient. We will divide this up into four ranges. Under 18, 18-30, 30-50, above 50.
-\item Gender (G): Male or female.
-\item Family history (F): If anyone in their family has suffered from heart disease. True or False.
-\item Depression (D): If the patient has suffered from depression. True or False.
-\item Physically active (PA): If the patient is physically active. True or False.
-\item Smokes (S): If the patient smokes. True or False.
-\item Overweight (O): If the patient is currently overweight. True or False.
-\item High cholesterol (HC): If the patient has high cholesterol. True of False.
-\item High blood pressure (HBP): If the patient has high blood pressure. True or False.
-\item Diabetes (DI): If the patient has diabetes. Type1, Type2 or None.
-\item Heart disease (HD): If the patient has heart disease. True or False.
-\end{itemize} 
-
-\subsubsection{Probability Distributions}
-$$P(A = Under 18) = x $$
-$$P(A = 18-30) = x $$
-$$P(A = 30-50) = x $$
-$$P(A = Above 50) = x $$
-
-$$P(G = male) = x $$
-
-$$P(F = true) = x $$
-$$P(D = true) = x $$
-$$P(PA = true) = x $$
-$$P(S = true) = x $$
-
-$$P(O = true | PA = true) = x $$
-$$P(O = true | PA = false) = x $$
-
-$$P(HC = true | O = true) = x $$
-$$P(HC = true | O = false) = x $$
-
-$$P(DI = true | O = true) = x $$
-$$P(DI = true | O = false) = x $$
-
-$$P(HBP = true | O= true, S = true) = x $$
-$$P(HBP = true | O= true, S = false) = x $$
-$$P(HBP = true | O= false, S = true) = x $$
-$$P(HBP = true | O= false, S = false) = x $$
-
-$$P(HD = true | A=true, D=true, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
-$$P(HD = true | A=true, D=true, F=true, G=true, DI=true, HBP=true, HC=false) = x $$
-$$P(HD = true | A=true, D=true, F=true, G=true, DI=true, HBP=false, HC=true) = x $$
-$$P(HD = true | A=true, D=true, F=true, G=true, DI=false, HBP=true, HC=true) = x $$
-$$P(HD = true | A=true, D=true, F=true, G=false, DI=true, HBP=true, HC=true) = x $$
-$$P(HD = true | A=true, D=true, F=false, G=true, DI=true, HBP=true, HC=true) = x $$
-$$P(HD = true | A=true, D=false, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
-$$P(HD = true | A=false, D=true, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
-$$P(HD = true | A=false, D=true, F=true, G=true, DI=true, HBP=true, HC=false) = x $$
-$$P(HD = true | A=false, D=true, F=true, G=true, DI=true, HBP=false, HC=true) = x $$
-$$P(HD = true | A=false, D=true, F=true, G=true, DI=false, HBP=true, HC=true) = x $$
-$$P(HD = true | A=false, D=true, F=true, G=false, DI=true, HBP=true, HC=true) = x $$
-$$P(HD = true | A=false, D=true, F=false, G=true, DI=true, HBP=true, HC=true) = x $$
-$$P(HD = true | A=false, D=false, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
-$$P(HD = true | A=false, D=false, F=true, G=true, DI=true, HBP=true, HC=false) = x $$
-$$P(HD = true | A=false, D=false, F=true, G=true, DI=true, HBP=true, HC=true) = x $$
-fuck this, reduce nodes
-
-\subsubsection{Method}
-looked at the vic health website about heart disease and the common causes, dependencies were determined by reading this page too \\
-
-then research each dependency, to find statistics for the probability
+something something diagnosis
 
 \subsection{Question 4}
 \subsubsection{Likelihood Weighting}
 
-We implemented the likelihood weighting in Python 2.7.5 to calculate the probability of $P(cloudy | sprinkler, wetgrass)$. \\
+We implemented the likelihood weighting in Python 2.7.5 to calculate the probability of P(cloudy $|$ sprinkler, wetgrass). \\
 
 Our program takes in the number of samples used to construct the estimate (N) as input and then runs M times which is set to 1000 by default. It then returns the mean, variance and standard deviation of the probability calculated using the likelihood weighting algorithm.\\
 
@@ -286,9 +209,9 @@ blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}
 Posterior distribution:
-	probability (  "Cloudy" ) { //1 variable(s) and 2 values
+	probability("Cloudy") {                 //1 variable(s) and 2 values
 		table 
-			0.17475728155339806	// p(true | evidence )
+			0.17475728155339806	// p(true  | evidence )
 			0.825242718446602; 	// p(false | evidence );
 	}
 \end{lstlisting}
