@@ -59,7 +59,7 @@ Bayesian networks are simple, probabilistic graphical models that represent sets
 Variable elimination is an exact inference method which eliminates/marginalises the non-evidence non-query variables individually (by summation or integration) by distributing the sum over the product. This method allows us to avoid duplicate (possibly expensive) computations and also to reduce large queries to a normalised message which can be passed along more readily.
 
 \subsection{Likelihood Weighting}
-Likelihood weighting is used to avoid the potentially large amount of samples that rejection sampling rejects. It runs simililarly to rejection sampling. However, when an observed node is reached, instead of rejecting it if it does not match the evidence, the probability of the observed node given the evidence is calculated. These product of all these probabilities is then the weight for the sample over the entire network. 
+Likelihood weighting is used to avoid the potentially large amount of samples that rejection sampling rejects. It runs similarly to rejection sampling. However, when an observed node is reached, instead of rejecting it if it does not match the evidence, the probability of the observed node given the evidence is calculated. These product of all these probabilities is then the weight for the sample over the entire network. 
 
 \section{Results and Discussion}
 \subsection{Question 1}
@@ -190,10 +190,8 @@ We created a Bayes net around heart disease and its common causes.
 
 \subsubsection{Random Variables}
 \begin{itemize}
-\item Age (A): Age of the patient. We will divide this up into four ranges. Under 18, 18-30, 30-50, above 50.
+\item Age (A): Age of the patient. We will divide this up into four ranges. Under 19, 20-30, 31-50, above 50.
 \item Gender (G): Male or female.
-\item Family history (F): If anyone in their family has suffered from heart disease. True or False.
-\item Depression (D): If the patient has suffered from depression. True or False.
 \item Physically active (PA): If the patient is physically active. True or False.
 \item Smokes (S): If the patient smokes. True or False.
 \item Overweight (O): If the patient is currently overweight. True or False.
@@ -204,8 +202,156 @@ We created a Bayes net around heart disease and its common causes.
 \end{itemize} 
 
 \subsubsection{Probability Distributions}
+$P(A <= 19) = 0.16$, $P(19 < A <= 30) = 0.21$, $P(30 < A <= 50) = 0.24$, $P(A > 50) = 0.39$ 
 
-fuck this, reduce nodes
+$P(G = male) = 0.62$,$P(G = female) = 0.38$
+
+$P(PA) = 0.54$ \\
+
+$P(S) = 0.367$ \\
+
+$P(O | PA) = 0.66$
+
+$P(O | \neg PA) = 0.01$\\
+
+
+$P(HC | O) = 0.374$
+
+$P(HC | \neg O) = 0.15$\\
+
+
+$P(HBP | S, O) = 0.215$
+
+$P(HBP | S, \neg O) = $
+
+$P(HBP | \neg S, O)$
+
+$P(HBP | \neg S, \neg O)$ \\
+
+
+$P(D = type1 | O) = $, $P(D = type1 | \neg O) = $\\
+$P(D = type2 | O) = $, $P(D = type2 | \neg O) = $\\
+$P(D = none | O) = $, $P(D = none | \neg O) = $\\
+
+$P(HD | A \leq 19, G = male, D = type1, HBP, HC) = 0.3 $\\
+$P(HD | A \leq 19, G = male, D = type1, HBP, \neg HC) = 0.2$\\
+$P(HD | A \leq 19, G = male, D = type1, \neg HBP, HC) = 0.2$\\
+$P(HD | A \leq 19, G = male, D = type1, \neg HBP, \neg HC) = 0.1$\\
+\\
+$P(HD | A \leq 19, G = male, D = type2, HBP, HC) = 0.3 $\\
+$P(HD | A \leq 19, G = male, D = type2, HBP, \neg HC) = 0.2$\\
+$P(HD | A \leq 19, G = male, D = type2, \neg HBP, HC) = 0.2$\\
+$P(HD | A \leq 19, G = male, D = type2, \neg HBP, \neg HC) = 0.1$\\
+\\
+$P(HD | A \leq 19, G = male, D = none, HBP, HC) = 0.2 $\\
+$P(HD | A \leq 19, G = male, D = none, HBP, \neg HC) = 0.1$\\
+$P(HD | A \leq 19, G = male, D = none, \neg HBP, HC) = 0.1$\\
+$P(HD | A \leq 19, G = male, D = none, \neg HBP, \neg HC) = 0.05$\\
+\\
+$P(HD | A \leq 19, G = female, D = type1, HBP, HC) = 0.2 $\\
+$P(HD | A \leq 19, G = female, D = type1, HBP, \neg HC) = 0.15$\\
+$P(HD | A \leq 19, G = female, D = type1, \neg HBP, HC) = 0.1$\\
+$P(HD | A \leq 19, G = female, D = type1, \neg HBP, \neg HC) = 0.05$\\
+\\
+$P(HD | A \leq 19, G = female, D = type2, HBP, HC) = 0.2 $\\
+$P(HD | A \leq 19, G = female, D = type2, HBP, \neg HC) = 0.15$\\
+$P(HD | A \leq 19, G = female, D = type2, \neg HBP, HC) = 0.1$\\
+$P(HD | A \leq 19, G = female, D = type2, \neg HBP, \neg HC) = 0.05$\\
+\\
+$P(HD | A \leq 19, G = female, D = none, HBP, HC) = 0.1 $\\
+$P(HD | A \leq 19, G = female, D = none, HBP, \neg HC) = 0.05$\\
+$P(HD | A \leq 19, G = female, D = none, \neg HBP, HC) = 0.1$\\
+$P(HD | A \leq 19, G = female, D = none, \neg HBP, \neg HC) = 0.05$\\
+\\
+$P(HD | 19 < A \leq 30, G = male, D = type1, HBP, HC) = 0.4 $\\
+$P(HD | 19 < A \leq 30, G = male, D = type1, HBP, \neg HC) = 0.3$\\
+$P(HD | 19 < A \leq 30, G = male, D = type1, \neg HBP, HC) = 0.3$\\
+$P(HD | 19 < A \leq 30, G = male, D = type1, \neg HBP, \neg HC) = 0.2$\\
+\\
+$P(HD | 19 < A \leq 30, G = male, D = type2, HBP, HC) = 0.4 $\\
+$P(HD | 19 < A \leq 30, G = male, D = type2, HBP, \neg HC) = 0.3$\\
+$P(HD | 19 < A \leq 30, G = male, D = type2, \neg HBP, HC) = 0.3$\\
+$P(HD | 19 < A \leq 30, G = male, D = type2, \neg HBP, \neg HC) = 0.2$\\
+\\
+$P(HD | 19 < A \leq 30, G = male, D = none, HBP, HC) = 0.3 $\\
+$P(HD | 19 < A \leq 30, G = male, D = none, HBP, \neg HC) = 0.2$\\
+$P(HD | 19 < A \leq 30, G = male, D = none, \neg HBP, HC) = 0.2$\\
+$P(HD | 19 < A \leq 30, G = male, D = none, \neg HBP, \neg HC) = 0.1$\\
+\\
+$P(HD | 19 < A \leq 30, G = female, D = type1, HBP, HC) = 0.3 $\\
+$P(HD | 19 < A \leq 30, G = female, D = type1, HBP, \neg HC) = 0.2$\\
+$P(HD | 19 < A \leq 30, G = female, D = type1, \neg HBP, HC) = 0.2$\\
+$P(HD | 19 < A \leq 30, G = female, D = type1, \neg HBP, \neg HC) = 0.1$\\
+\\
+$P(HD | 19 < A \leq 30, G = female, D = type2, HBP, HC) = 0.3 $\\
+$P(HD | 19 < A \leq 30, G = female, D = type2, HBP, \neg HC) = 0.2$\\
+$P(HD | 19 < A \leq 30, G = female, D = type2, \neg HBP, HC) = 0.2$\\
+$P(HD | 19 < A \leq 30, G = female, D = type2, \neg HBP, \neg HC) = 0.1$\\
+\\
+$P(HD | 19 < A \leq 30, G = female, D = none, HBP, HC) = 0.2 $\\
+$P(HD | 19 < A \leq 30, G = female, D = none, HBP, \neg HC) = 0.1$\\
+$P(HD | 19 < A \leq 30, G = female, D = none, \neg HBP, HC) = 0.1$\\
+$P(HD | 19 < A \leq 30, G = female, D = none, \neg HBP, \neg HC) = 0.05$\\
+\\
+$P(HD | 30 < A \leq 50, G = male, D = type1, HBP, HC) = 0.6 $\\
+$P(HD | 30 < A \leq 50, G = male, D = type1, HBP, \neg HC) = 0.4$\\
+$P(HD | 30 < A \leq 50, G = male, D = type1, \neg HBP, HC) = 0.5$\\
+$P(HD | 30 < A \leq 50, G = male, D = type1, \neg HBP, \neg HC) = 0.3$\\
+\\
+$P(HD | 30 < A \leq 50, G = male, D = type2, HBP, HC) = 0.6$\\
+$P(HD | 30 < A \leq 50, G = male, D = type2, HBP, \neg HC) = 0.4$\\
+$P(HD | 30 < A \leq 50, G = male, D = type2, \neg HBP, HC) = 0.5$\\
+$P(HD | 30 < A \leq 50, G = male, D = type2, \neg HBP, \neg HC) = 0.3$\\
+\\
+$P(HD | 30 < A \leq 50, G = male, D = none, HBP, HC) = 0.5 $\\
+$P(HD | 30 < A \leq 50, G = male, D = none, HBP, \neg HC) = 0.3$\\
+$P(HD | 30 < A \leq 50, G = male, D = none, \neg HBP, HC) = 0.4$\\
+$P(HD | 30 < A \leq 50, G = male, D = none, \neg HBP, \neg HC) = 0.2$\\
+\\
+$P(HD | 30 < A \leq 50, G = female, D = type1, HBP, HC) = 0.4 $\\
+$P(HD | 30 < A \leq 50, G = female, D = type1, HBP, \neg HC) = 0.3$\\
+$P(HD | 30 < A \leq 50, G = female, D = type1, \neg HBP, HC) = 0.3$\\
+$P(HD | 30 < A \leq 50, G = female, D = type1, \neg HBP, \neg HC) = 0.2$\\
+\\
+$P(HD | 30 < A \leq 50, G = female, D = type2, HBP, HC) = 0.4 $\\
+$P(HD | 30 < A \leq 50, G = female, D = type2, HBP, \neg HC) = 0.3$\\
+$P(HD | 30 < A \leq 50, G = female, D = type2, \neg HBP, HC) = 0.3$\\
+$P(HD | 30 < A \leq 50, G = female, D = type2, \neg HBP, \neg HC) = 0.2$\\
+\\
+$P(HD | 30 < A \leq 50, G = female, D = none, HBP, HC) = 0.3 $\\
+$P(HD | 30 < A \leq 50, G = female, D = none, HBP, \neg HC) = 0.2$\\
+$P(HD | 30 < A \leq 50, G = female, D = none, \neg HBP, HC) = 0.2$\\
+$P(HD | 30 < A \leq 50, G = female, D = none, \neg HBP, \neg HC) = 0.1$\\
+\\
+$P(HD | A > 50, G = male, D = type1, HBP, HC) = 0.7 $\\
+$P(HD | A > 50, G = male, D = type1, HBP, \neg HC) = 0.5$\\
+$P(HD | A > 50, G = male, D = type1, \neg HBP, HC) = 0.6$\\
+$P(HD | A > 50, G = male, D = type1, \neg HBP, \neg HC) = 0.4$\\
+\\
+$P(HD | A > 50, G = male, D = type2, HBP, HC) = 0.7$\\
+$P(HD | A > 50, G = male, D = type2, HBP, \neg HC) = 0.5$\\
+$P(HD | A > 50, G = male, D = type2, \neg HBP, HC) = 0.6$\\
+$P(HD | A > 50, G = male, D = type2, \neg HBP, \neg HC) = 0.4$\\
+\\
+$P(HD | A > 50, G = male, D = none, HBP, HC) = 0.6 $\\
+$P(HD | A > 50, G = male, D = none, HBP, \neg HC) = 0.4$\\
+$P(HD | A > 50, G = male, D = none, \neg HBP, HC) = 0.5$\\
+$P(HD | A > 50, G = male, D = none, \neg HBP, \neg HC) = 0.3$\\
+\\
+$P(HD | A > 50, G = female, D = type1, HBP, HC) = 0.5 $\\
+$P(HD | A > 50, G = female, D = type1, HBP, \neg HC) = 0.4$\\
+$P(HD | A > 50, G = female, D = type1, \neg HBP, HC) = 0.4$\\
+$P(HD | A > 50, G = female, D = type1, \neg HBP, \neg HC) = 0.3$\\
+\\
+$P(HD | A > 50, G = female, D = type2, HBP, HC) = 0.5 $\\
+$P(HD | A > 50, G = female, D = type2, HBP, \neg HC) = 0.4$\\
+$P(HD | A > 50, G = female, D = type2, \neg HBP, HC) = 0.4$\\
+$P(HD | A > 50, G = female, D = type2, \neg HBP, \neg HC) = 0.3$\\
+\\
+$P(HD | A > 50, G = female, D = none, HBP, HC) = 0.4$\\
+$P(HD | A > 50, G = female, D = none, HBP, \neg HC) = 0.3$\\
+$P(HD | A > 50, G = female, D = none, \neg HBP, HC) = 0.3$\\
+$P(HD | A > 50, G = female, D = none, \neg HBP, \neg HC) = 0.2$
 
 \subsubsection{Method}
 looked at the vic health website about heart disease and the common causes, dependencies were determined by reading this page too \\
