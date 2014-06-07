@@ -38,7 +38,6 @@
 \renewcommand\headrulewidth{0.4pt}
 \renewcommand\footrulewidth{0.4pt}
 \renewcommand{\tt}{\texttt}
-\setlength\parindent{0pt} 
 
 \title{COMP3308 Assignment 2 \\ Bayesian Networks}
 \author{Woo Hyun Jung 310250811 \\  Khanh Cao Quoc Nguyen 311253865}
@@ -53,13 +52,13 @@ The aim of this assignment is to build Bayesian networks for diagnostic problems
 
 \section{Methods}
 \subsection{Bayesian Networks}
-Bayesian networks are simple, probabilistic graphical models that represent sets of random variables and their conditional dependencies.
+Bayesian networks are simple, probabilistic graphical models that represent sets of random variables and their conditional dependencies. In general, they are acylic directed graphs, which are used to set up a scenario and calculate probabilities of events based on evidence and dependecies.
 
 \subsection{Variable Elimination}
-Variable elimination is an exact inference method which eliminates/marginalises the non-evidence non-query variables individually (by summation or integration) by distributing the sum over the product. This method allows us to avoid duplicate (possibly expensive) computations and also to reduce large queries to a normalised message which can be passed along more readily.
+Variable elimination is an exact inference method which eliminates/marginalises the non-evidence non-query variables individually by distributing the sum over the product (i.e. summation for discrete variables and integration for continuous variables). This method allows us to avoid duplicate (possibly expensive) computations and also to simplify large queries to a normalised message which can be calculated and passed along more easily.
 
 \subsection{Likelihood Weighting}
-Likelihood weighting is used to avoid the potentially large amount of samples that rejection sampling rejects. It runs similarly to rejection sampling. However, when an observed node is reached, instead of rejecting it if it does not match the evidence, the probability of the observed node given the evidence is calculated. These product of all these probabilities is then the weight for the sample over the entire network. 
+Likelihood weighting is used to avoid the potentially large amount of samples that rejection sampling rejects. It runs similarly to rejection sampling. However, when an observed node is reached, instead of rejecting it if it does not match the evidence, the probability of the observed node given the evidence is calculated. The product of all these probabilities is then the weight for the sample over the entire network. 
 
 \section{Results and Discussion}
 \subsection{Question 1}
@@ -159,15 +158,15 @@ Using the \tt{Observe} and \tt{Query} functions in JavaBayes, $P(C | M) = 0.68$.
 \item
 \begin{align*}
 P(C | X_1, \ldots , X_n) &= \frac{P(C) P(X_1, \ldots , X_n | C)}{P(X_1, \ldots , X_n)} & \text{Bayes' Theorem} \\
-P(C | X_1, ... , X_n) &= \frac{P(C, X_1, ... , X_n)}{P(X_1, ... , X_n)} & \text{conditional probability} \\
-P(C | X_1, ... , X_n) P(X_1, ... , X_n) &= P(C, X_1, ... , X_n) \\
-P(C, X_1, ... , X_n) &=  P(X_1, ... , X_n) \frac{P(C) P(X_1, ... , X_n | C)}{P(X_1, ... , X_n)} \\
-P(C, X_1, ... , X_n) &=  P(C) P(X_1, ... , X_n | C) \\ 
-P(X_1, ... , X_n | C) &=  \prod_{i=1}^n P(X_i | C) 
+P(C | X_1, \ldots , X_n) &= \frac{P(C, X_1, \ldots , X_n)}{P(X_1, \ldots , X_n)} & \text{conditional probability} \\
+P(C | X_1, \ldots , X_n) P(X_1, \ldots , X_n) &= P(C, X_1, \ldots , X_n) \\
+P(C, X_1, \ldots , X_n) &=  P(X_1, \ldots , X_n) \frac{P(C) P(X_1, \ldots , X_n | C)}{P(X_1, \ldots , X_n)} \\
+P(C, X_1, \ldots , X_n) &=  P(C) P(X_1, \ldots , X_n | C) \\ 
+P(X_1, \ldots , X_n | C) &=  \prod_{i=1}^n P(X_i | C) 
 \end{align*}
-which is the distribution for $X_1, ..., X_n$ which can be given by the product of each node's probability given its parent which is $C$.
+which is the distribution for $X_1, \ldots, X_n$ which can be given by the product of each node's probability given its parent which is $C$.
 Therefore,
-$P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $
+$P(C, x_1, \ldots , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $
 \item
 \begin{align*}
 \log{\left(\frac{P(C = c | X_1, \ldots, X_n)}{P(C = \neg c | X_1, \ldots, X_n)}\right)} &= \log{\left(\frac{P(C=c)}{P(C=\neg c)} \prod_{i=1}^n \frac{P(x_i | C = c)}{P(x_i | C = \neg c)}\right)} & \text{from part a)} \\
@@ -391,8 +390,6 @@ N    & Mean      & Variance        & Standard Deviation \\ \hline
 \caption {Accuracy results for likelihood weighting}
 \end{table}
 
-blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah discuss table?
-
 \subsubsection{Exact Inference using JavaBayes}
 \begin{minipage}{\linewidth}
 \begin{center}
@@ -415,13 +412,14 @@ Posterior distribution:
 \\
 \\
 
-blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah discuss exact inference and compare to other thing
-
 \section{Conclusions}
-blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah blah 
+As we input more samples to the program, the mean tends towards 0.5 and the variance and standard deviation also tend closer to 0. The low variance and standard deviation indicate that many of the values were closer to the mean, and as a result we can estimate the probability to be 0.5. \\
+We noted also that as we increased the sample size, the program's runtime was increased, which was expected, as the algorithm must cover the entire network multiple times in order to create the distribution of interest. 
+
+JavaBayes uses exact inference, so we were able to obtain a much more concise result where the exact probability was calculated by doing the math. As seen above, we have a differing answer from our likelihood weighting ouput, which takes only random sampling and calculates a weight. Since the sampling is (psuedo) random, there are chances that we may get samples that are outliers and should be rejected, but are not, and thus contribute negatively to the outcome.
 
 \section{Reflection}
-Once again, the ability to work in teams proved beneficial to the completion of this task. It especially helped when we could compare results and confirm our findings, or discussing of various elements such as methods, calculations and interpretations of results. 
+Once again, the ability to work in a team proved beneficial to the completion of this task. It especially helped when we could compare results and confirm our findings, or discussing of various elements such as methods, calculations and interpretations of results. 
 
 Also, this assignment gave us further insight into the usage and understanding of probability graphical models, with challenging questions that required a lot of thought to deal with.  
 \section{Code}
