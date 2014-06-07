@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.26)  6 JUN 2014 16:23
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2014.4.26)  7 JUN 2014 21:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -382,241 +382,245 @@ Overfull \hbox (26.58163pt too wide) in paragraph at lines 178--178
 [] 
  []
 
-[4 <./part2_nbc.png>] <part3_bn.png, id=27, 690.58pt x 501.875pt>
-File: part3_bn.png Graphic file (type png)
+[4 <./part2_nbc.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
-<use part3_bn.png>
-Package pdftex.def Info: part3_bn.png used on input line 186.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 213--214
+
+ []
+
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 222--223
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 225--228
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 229--348
+
+ []
+
+[6] [7]
+Underfull \hbox (badness 10000) in paragraph at lines 350--351
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 361--362
+
+ []
+
+[8] <part3_bn.png, id=41, 690.58pt x 501.875pt>
+File: part3_bn.png Graphic file (type png)
+ <use part3_bn.png>
+Package pdftex.def Info: part3_bn.png used on input line 367.
 (pdftex.def)             Requested size: 345.28915pt x 250.93687pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 184--190
-
- []
-
-[5 <./part3_bn.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 209--210
+Underfull \hbox (badness 10000) in paragraph at lines 365--371
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 211--212
+Underfull \hbox (badness 10000) in paragraph at lines 375--376
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 215--216
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 220--221
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--230
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 232--235
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 236--355
-
- []
-
-[6] [7] [8]
-Underfull \hbox (badness 10000) in paragraph at lines 357--358
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 364--365
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 366--367
+Underfull \hbox (badness 10000) in paragraph at lines 377--378
 
  []
 
 <part4_bn.png, id=42, 235.88126pt x 232.87pt>
 File: part4_bn.png Graphic file (type png)
  <use part4_bn.png>
-Package pdftex.def Info: part4_bn.png used on input line 388.
+Package pdftex.def Info: part4_bn.png used on input line 399.
 (pdftex.def)             Requested size: 165.11575pt x 163.00787pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 386--392
+Underfull \hbox (badness 10000) in paragraph at lines 397--403
+
+ []
+
+[9 <./part3_bn.png (PNG copy)>]
+Underfull \hbox (badness 10000) in paragraph at lines 404--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--406
+Underfull \hbox (badness 10000) in paragraph at lines 404--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--406
+Underfull \hbox (badness 10000) in paragraph at lines 404--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 393--406
+Underfull \hbox (badness 10000) in paragraph at lines 428--429
 
  []
 
-[9 <./part4_bn.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 417--418
+[10 <./part4_bn.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 422--423
-
- []
-
-LaTeX Font Info:    Try loading font information for OML+cmr on input line 428.
+LaTeX Font Info:    Try loading font information for OML+cmr on input line 439.
 
 (/usr/local/texlive/2013/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 428.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 439.
 
-Underfull \hbox (badness 10000) in paragraph at lines 426--465
-
- []
-
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 467--470
+Underfull \hbox (badness 10000) in paragraph at lines 437--476
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 474--475
+Underfull \hbox (badness 10000) in paragraph at lines 478--481
 
  []
 
-[11] 
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 485--486
+
+ []
+
+
 AED: lastpage setting LastPage
 [12] (./ass2_report.aux) ) 
 Here is how much of TeX's memory you used:
  5526 strings out of 493315
  83179 string characters out of 6137904
- 280209 words of memory out of 5000000
+ 276209 words of memory out of 5000000
  8895 multiletter control sequences out of 15000+600000
  9538 words of font info for 35 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
@@ -633,7 +637,7 @@ fb></usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 /usr/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></us
 r/local/texlive/2013/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr
 /local/texlive/2013/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on ass2_report.pdf (12 pages, 177917 bytes).
+Output written on ass2_report.pdf (12 pages, 179092 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  62 compressed objects within 1 object stream

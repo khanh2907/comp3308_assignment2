@@ -179,14 +179,7 @@ $P(C, x_1, ... , x_n) =  P(C) \prod_{i=1}^n P(x_i | C) $
 \end{enumerate}
 
 \subsection{Question 3}
-We created a Bayes net around heart disease and its common causes.
-
-\begin{minipage}{\linewidth}
-\begin{center}
-\includegraphics[scale=0.5]{part3_bn}
-\end{center}
-\captionof{figure}{Heart disease diagnosis Bayes net}
-\end{minipage}\\
+Based on some of the common causes of coronary heart disease, we wanted to build a Bayesian network that would help us detect if a patient has heart disease.
 
 \subsubsection{Random Variables}
 \begin{itemize}
@@ -222,11 +215,11 @@ $P(HC | \neg O) = 0.15$\\
 
 $P(HBP | S, O) = 0.215$
 
-$P(HBP | S, \neg O) = $
+$P(HBP | S, \neg O) = 0.11$
 
-$P(HBP | \neg S, O)$
+$P(HBP | \neg S, O) = 0.08$
 
-$P(HBP | \neg S, \neg O)$ \\
+$P(HBP | \neg S, \neg O) = 0.05$ \\
 
 
 $P(D = type1 | O) = $, $P(D = type1 | \neg O) = $\\
@@ -354,9 +347,27 @@ $P(HD | A > 50, G = female, D = none, \neg HBP, HC) = 0.3$\\
 $P(HD | A > 50, G = female, D = none, \neg HBP, \neg HC) = 0.2$
 
 \subsubsection{Method}
-looked at the vic health website about heart disease and the common causes, dependencies were determined by reading this page too \\
+Firstly, we did some research on the Internet, looking at the medical and health websites that were discussing heart disease in Australia and the common causes. Based on this list of common causes, we determined which one could be used as random variables in our Bayes net. Taking these variables, we researched further to find statistics to model our probability distribution.\\
 
-then research each dependency, to find statistics for the probability
+We then tried to link these variables and found the following from research various sources on the Internet:
+\begin{itemize}
+\item Physical activity greatly affects if a person is overweight or not.
+\item Smoking and being overweight can cause a person to have a high blood pressure.
+\item Being overweight can cause a person to have high cholesterol.
+\item Being overweight can cause a person to have diabetes.
+\item Age, gender, high blood pressure, high cholesterol and diabetes are causes of heart disease.
+\end{itemize} 
+
+From here we assigned the probabilities for the variables. Age and gender were based on Australian age and gender demographics. Physically active, overweight and smoking were also taken from Australian statistics found on the Internet. From these defined probability we used the Bayes theorem and conditional joint probability to calculate the rest of the probabilities. Some of these probability however were estimated and weighted. \\
+
+Finally we drew up the Bayes network based on our finds and calculations which can seen below in Figure 6.
+
+\begin{minipage}{\linewidth}
+\begin{center}
+\includegraphics[scale=0.5]{part3_bn}
+\end{center}
+\captionof{figure}{Heart disease diagnosis Bayes net}
+\end{minipage}\\
 
 \subsection{Question 4}
 \subsubsection{Likelihood Weighting}
