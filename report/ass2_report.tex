@@ -38,6 +38,7 @@
 \renewcommand\headrulewidth{0.4pt}
 \renewcommand\footrulewidth{0.4pt}
 \renewcommand{\tt}{\texttt}
+\setlength\parindent{0pt} 
 
 \title{COMP3308 Assignment 2 \\ Bayesian Networks}
 \author{Woo Hyun Jung 310250811 \\  Khanh Cao Quoc Nguyen 311253865}
@@ -390,6 +391,8 @@ N    & Mean      & Variance        & Standard Deviation \\ \hline
 \caption {Accuracy results for likelihood weighting}
 \end{table}
 
+As we input more samples to the program, the mean tends towards 0.5 and the variance and standard deviation also tend closer to 0. The low variance and standard deviation indicate that many of the values were closer to the mean, and as a result we can estimate the probability to be 0.5. \\
+
 \subsubsection{Exact Inference using JavaBayes}
 \begin{minipage}{\linewidth}
 \begin{center}
@@ -397,6 +400,7 @@ N    & Mean      & Variance        & Standard Deviation \\ \hline
 \end{center}
 \captionof{figure}{Equivalent graphical model created using JavaBayes. Sprinkler and Wet Grass set to true.}
 \end{minipage}\\
+
 
 \begin{minipage}{\linewidth}
 \begin{lstlisting}
@@ -410,13 +414,14 @@ Posterior distribution:
 \captionof{figure}{$P(Cloudy | Sprinkler, WetGrass )$ query output using JavaBayes}
 \end{minipage}\\
 \\
-\\
+JavaBayes uses exact inference, so we were able to obtain a much more concise result where the exact probability was calculated by doing the math. As seen above, we have a differing answer from our likelihood weighting ouput, which takes only random sampling and calculates a weight. Since the sampling is (psuedo) random, there are chances that we may get samples that are outliers and should be rejected, but are not, and thus contribute negatively to the outcome.
 
 \section{Conclusions}
-As we input more samples to the program, the mean tends towards 0.5 and the variance and standard deviation also tend closer to 0. The low variance and standard deviation indicate that many of the values were closer to the mean, and as a result we can estimate the probability to be 0.5. \\
-We noted also that as we increased the sample size, the program's runtime was increased, which was expected, as the algorithm must cover the entire network multiple times in order to create the distribution of interest. 
+Using JavaBayes was useful in this task as it essentially did the math for us without us having to do many manual calculations. It was also helpful for quickly constructing graphical models, as seen in Q1 and Q4. 
 
-JavaBayes uses exact inference, so we were able to obtain a much more concise result where the exact probability was calculated by doing the math. As seen above, we have a differing answer from our likelihood weighting ouput, which takes only random sampling and calculates a weight. Since the sampling is (psuedo) random, there are chances that we may get samples that are outliers and should be rejected, but are not, and thus contribute negatively to the outcome.
+In our implementation of likelihood weighting, we noted also that as we increased the sample size, the runtime was increased. This was expected, as the algorithm must cover the entire network multiple times in order to create the distribution of interest. 
+
+For future work, we would like to see these graphical models conducting much more complex work, especially in medical fields (although accurately predicting the weather would be cool too). 
 
 \section{Reflection}
 Once again, the ability to work in a team proved beneficial to the completion of this task. It especially helped when we could compare results and confirm our findings, or discussing of various elements such as methods, calculations and interpretations of results. 
