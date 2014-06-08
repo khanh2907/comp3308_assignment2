@@ -156,8 +156,7 @@ Using the \tt{Observe} and \tt{Query} functions in JavaBayes, $P(C | M) = 0.68$.
 \end{minipage}\\
 
 \begin{enumerate}[a)]
-\item
-\begin{align*}
+\item \begin{align*}
 P(C | X_1, \ldots , X_n) &= \frac{P(C) P(X_1, \ldots , X_n | C)}{P(X_1, \ldots , X_n)} & \text{Bayes' Theorem} \\
 P(C | X_1, \ldots , X_n) &= \frac{P(C, X_1, \ldots , X_n)}{P(X_1, \ldots , X_n)} & \text{conditional probability} \\
 P(C | X_1, \ldots , X_n) P(X_1, \ldots , X_n) &= P(C, X_1, \ldots , X_n) \\
@@ -372,9 +371,7 @@ Finally we drew up the Bayes network based on our finds and calculations which c
 \subsection{Question 4}
 \subsubsection{Likelihood Weighting}
 
-We implemented the likelihood weighting in Python 2.7.5 to calculate the probability of P(cloudy $|$ sprinkler, wetgrass). \\
-
-Our program takes in the number of samples used to construct the estimate (N) as input and then runs M times which is set to 1000 by default. It then returns the mean, variance and standard deviation of the probability calculated using the likelihood weighting algorithm.\\
+We implemented the likelihood weighting in Python 2.7.5 to calculate the probability of P(cloudy $|$ sprinkler, wetgrass). Our program takes in the number of samples used to construct the estimate (N) as input and then runs M times which is set to 1000 by default. It then returns the mean, variance and standard deviation of the probability calculated using the likelihood weighting algorithm.\\
 
 Below in Table 1, are the results for N=10, 100, 1000, 5000.
 
